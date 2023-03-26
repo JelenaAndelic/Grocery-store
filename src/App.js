@@ -27,6 +27,9 @@ function App() {
     const name = e.target.name;
     const value = e.target.value;
     setItem({ ...item, [name]: value });
+  };
+
+  const handleAmount = (e) => {
     setTotalAmount(e.target.value);
   };
 
@@ -64,7 +67,10 @@ function App() {
     e.preventDefault();
     setFormErrors(validate(item));
 
-    if (item.name && item.quantity && item.price && isEditing) {
+    if (!item.name || !item.quantity || !item.price) {
+      alert("All input are required!");
+      setFormErrors({});
+    } else if (item.name && item.quantity && item.price && isEditing) {
       setList(
         list.map((stuff) => {
           if (stuff.id === editID) {
@@ -116,7 +122,7 @@ function App() {
             name="amount"
             placeholder="e.g. 100$"
             value={totalAmount}
-            onChange={handleChange}
+            onChange={handleAmount}
           />
           <button type="submit" className="submit-btn">
             calculate
