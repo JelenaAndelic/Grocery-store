@@ -1,0 +1,164 @@
+/* Global Styles */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: var(--clr-primary-9);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: #000;
+  padding: 0.375rem 0.75rem;
+  display: inline-block;
+  font-size: 0.875rem;
+  border: 2px solid #000;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #000;
+}
+
+/* section */
+
+.center {
+  margin: 0 auto;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 45rem;
+  margin-top: 8rem;
+}
+
+/*
+=============== 
+Grocery List
+===============
+*/
+.section-center {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.budget-form {
+  margin-bottom: 3rem;
+}
+
+.grocery-form h3 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.form-control {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.grocery {
+  padding: 0.25rem;
+  padding-left: 1rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-color: transparent;
+  font-size: 1rem;
+  flex: 1 0 auto;
+}
+.submit-btn {
+  border-color: transparent;
+  flex: 0 0 5rem;
+  display: grid;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background: lightgreen;
+  border-radius: 5px;
+}
+
+.grocery-container {
+  margin-top: 2rem;
+}
+
+.grocery-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 1rem;
+  text-transform: capitalize;
+}
+.name {
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+.edit-btn,
+.delete-btn {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin: 0 0.15rem;
+}
+.edit-btn {
+  color: lightgreen;
+}
+.edit-btn:hover {
+  color: darkgreen;
+}
+.delete-btn {
+  color: lightcoral;
+}
+.delete-btn:hover {
+  color: red;
+}
+.clear-btn {
+  text-transform: capitalize;
+  width: 10rem;
+  height: 1.5rem;
+  display: grid;
+  align-items: center;
+  background: transparent;
+  border-color: transparent;
+  color: lightcoral;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 1.25rem;
+}
+.clear-btn:hover {
+  color: red;
+}
+
+.form__error {
+  color: red;
+}
+
+.info-message {
+  text-align: center;
+  color: lightcoral;
+}
